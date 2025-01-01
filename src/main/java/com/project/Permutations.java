@@ -1,6 +1,7 @@
 package com.project;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class Permutations {
 
@@ -18,6 +19,17 @@ public class Permutations {
         permutationList.clear();
 
         return permutationsArrayList;
+
+    }
+
+    public static ArrayList<String> permutationsListUnique(String string) {
+
+        generatePermutations(string, "");
+        HashSet<String> permutationsHashSet = new HashSet<>(permutationList);
+        ArrayList<String> permutationsArrayListUnique = new ArrayList<>(permutationsHashSet);
+        permutationList.clear();
+
+        return permutationsArrayListUnique;
 
     }
 

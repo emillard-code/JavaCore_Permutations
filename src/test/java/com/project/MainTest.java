@@ -17,9 +17,7 @@ public class MainTest {
     @Test
     public void testPrint() throws Exception {
 
-        String text = tapSystemOut(() -> {
-            Main.print("Car");
-        });
+        String text = tapSystemOut(() -> Main.print("Car"));
 
         assertEquals("Car", text.trim());
 
